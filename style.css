@@ -1,1 +1,486 @@
-:root{--ink:#24292f;--muted:#59636e;--blue:#205493;--pale:#f4f7fa;--line:#dce2e8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(980px,calc(100% - 44px));margin:0 auto}.topbar{position:sticky;top:0;z-index:10;min-height:66px;padding:0 max(22px,calc((100vw - 1120px)/2));display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:32px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}.wordmark{color:var(--blue);font-family:Georgia,serif;font-size:20px;font-weight:700}nav{display:flex;gap:26px}nav a,.cv-link{color:#4c5660;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}.cv-link{border:1px solid var(--blue);color:var(--blue);padding:6px 14px}.hero{padding:78px 0 62px;display:grid;grid-template-columns:150px 1fr;gap:52px;align-items:start;border-bottom:1px solid var(--line)}.identity-mark{width:150px;height:150px;display:grid;place-items:center;border-radius:50%;background:var(--blue);color:#fff;font-family:Georgia,serif;font-size:44px;box-shadow:inset 0 0 0 8px rgba(255,255,255,.18)}.kicker{margin:0 0 5px;color:var(--blue);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.intro h1{margin:0;font-family:Georgia,serif;font-size:46px;line-height:1.15;font-weight:500}.intro h2{margin:8px 0 25px;color:#4f5a64;font-size:17px;line-height:1.45}.intro>p{margin:0 0 16px;color:#414a53}.social-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px;color:var(--blue);font-size:14px;font-weight:700}.social-links span{color:#a7afb7}.section{padding:62px 0;border-bottom:1px solid var(--line)}.section-title{margin:0 0 30px;padding-bottom:10px;border-bottom:2px solid var(--blue);color:#263746;font-family:Georgia,serif;font-size:25px;font-weight:500;text-transform:uppercase}.news-item{display:grid;grid-template-columns:88px 1fr;gap:22px;padding:13px 0;border-bottom:1px dotted #cbd2d9}.news-item time,.entry-head time{color:var(--blue);font-size:13px;font-weight:700;white-space:nowrap}.news-item p{margin:0}.stack{display:grid;gap:38px}.entry{position:relative;padding-left:20px;border-left:3px solid #d9e5f0}.entry:before{content:"";position:absolute;left:-6px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--blue)}.entry-head{display:grid;grid-template-columns:1fr auto;gap:24px}.entry h3{margin:0;color:#263746;font-family:Georgia,serif;font-size:20px;line-height:1.35}.entry-meta{margin:4px 0 0;color:var(--muted);font-size:14px;font-style:italic}.entry ul{margin:15px 0 0;padding-left:20px;color:#414a53}.entry li{margin:7px 0}.compact-stack{gap:28px}.two-column{display:grid;grid-template-columns:1fr 1fr;gap:58px}.skill-list{margin:0}.skill-list>div{display:grid;grid-template-columns:135px 1fr;gap:18px;padding:9px 0;border-bottom:1px dotted #cbd2d9}.skill-list dt{font-weight:700}.skill-list dd{margin:0;color:var(--muted)}.plain-list{margin:0;padding-left:20px}.plain-list li{margin:10px 0}footer{background:var(--pale);border-top:1px solid var(--line)}.footer-inner{min-height:130px;display:flex;align-items:center;justify-content:space-between;gap:30px}.footer-inner strong{font-family:Georgia,serif;font-size:18px}.footer-inner p{margin:3px 0 0;color:var(--muted);font-size:13px}.footer-inner>a{color:var(--blue);font-size:13px;font-weight:700}@media(max-width:760px){.topbar{grid-template-columns:1fr auto}nav{display:none}.hero{grid-template-columns:1fr;gap:28px;padding-top:48px}.identity-mark{width:112px;height:112px;font-size:34px}.entry-head{grid-template-columns:1fr;gap:5px}.two-column{grid-template-columns:1fr;gap:52px}}@media(max-width:480px){.wrap{width:min(100% - 30px,980px)}.section{padding:48px 0}.topbar{padding:0 15px}.news-item{grid-template-columns:60px 1fr;gap:12px}.skill-list>div{grid-template-columns:1fr;gap:2px}.footer-inner{padding:28px 0;align-items:flex-start;flex-direction:column}}
+:root {
+  --ink: #24292f;
+  --muted: #59636e;
+  --blue: #205493;
+  --pale: #f4f7fa;
+  --line: #dce2e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  width: min(980px, calc(100% - 44px));
+  margin: 0 auto;
+}
+
+
+/* Header */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  min-height: 66px;
+  padding: 0 max(22px, calc((100vw - 1120px) / 2));
+
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 32px;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+
+.wordmark {
+  color: var(--blue);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+nav a,
+.cv-link {
+  color: #4c5660;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+nav a:hover,
+.cv-link:hover {
+  color: var(--blue);
+}
+
+.cv-link {
+  padding: 6px 14px;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+
+/* About and profile */
+
+.hero {
+  padding: 78px 0 62px;
+
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: start;
+  gap: 52px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+/* Use this only if you want the SP circle. */
+
+.identity-mark {
+  width: 150px;
+  height: 150px;
+
+  display: grid;
+  place-items: center;
+
+  color: #ffffff;
+  background: var(--blue);
+  border-radius: 50%;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 44px;
+
+  box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.18);
+}
+
+/* Use this for your actual photograph. */
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  max-width: 150px;
+  min-width: 150px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center top;
+
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 2px var(--blue),
+    0 8px 24px rgba(32, 84, 147, 0.18);
+}
+
+.kicker {
+  margin: 0 0 5px;
+
+  color: var(--blue);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intro h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.intro h2 {
+  margin: 8px 0 25px;
+
+  color: #4f5a64;
+
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.intro > p {
+  margin: 0 0 16px;
+  color: #414a53;
+}
+
+.social-links {
+  margin-top: 24px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  color: var(--blue);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.social-links span {
+  color: #a7afb7;
+}
+
+
+/* General sections */
+
+.section {
+  padding: 62px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-title {
+  margin: 0 0 30px;
+  padding-bottom: 10px;
+
+  color: #263746;
+  border-bottom: 2px solid var(--blue);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+/* Recent news */
+
+.news-list {
+  display: grid;
+}
+
+.news-item {
+  padding: 13px 0;
+
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 22px;
+
+  border-bottom: 1px dotted #cbd2d9;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-item time,
+.entry-head time {
+  color: var(--blue);
+
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.news-item p {
+  margin: 0;
+}
+
+
+/* Research, work and education entries */
+
+.stack {
+  display: grid;
+  gap: 38px;
+}
+
+.compact-stack {
+  gap: 28px;
+}
+
+.entry {
+  position: relative;
+
+  padding-left: 20px;
+  border-left: 3px solid #d9e5f0;
+}
+
+.entry::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: -6px;
+
+  width: 9px;
+  height: 9px;
+
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+.entry-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 24px;
+}
+
+.entry h3 {
+  margin: 0;
+
+  color: #263746;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.entry-meta {
+  margin: 4px 0 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  font-style: italic;
+}
+
+.entry ul {
+  margin: 15px 0 0;
+  padding-left: 20px;
+
+  color: #414a53;
+}
+
+.entry li {
+  margin: 7px 0;
+}
+
+
+/* Skills and awards */
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 58px;
+}
+
+.skill-list {
+  margin: 0;
+}
+
+.skill-list > div {
+  padding: 9px 0;
+
+  display: grid;
+  grid-template-columns: 135px 1fr;
+  gap: 18px;
+
+  border-bottom: 1px dotted #cbd2d9;
+}
+
+.skill-list dt {
+  font-weight: 700;
+}
+
+.skill-list dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.plain-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.plain-list li {
+  margin: 10px 0;
+}
+
+
+/* Footer */
+
+footer {
+  background: var(--pale);
+  border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+  min-height: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-inner strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+}
+
+.footer-inner p {
+  margin: 3px 0 0;
+
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-inner > a {
+  color: var(--blue);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* Tablet and mobile */
+
+@media (max-width: 760px) {
+
+  .topbar {
+    grid-template-columns: 1fr auto;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 48px;
+
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .identity-mark {
+    width: 112px;
+    height: 112px;
+    font-size: 34px;
+  }
+
+  .profile-photo {
+    width: 112px;
+    height: 112px;
+    max-width: 112px;
+    min-width: 112px;
+  }
+
+  .entry-head {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+}
+
+
+/* Small phones */
+
+@media (max-width: 480px) {
+
+  .wrap {
+    width: min(100% - 30px, 980px);
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .topbar {
+    padding: 0 15px;
+    gap: 14px;
+  }
+
+  .wordmark {
+    font-size: 18px;
+  }
+
+  .news-item {
+    grid-template-columns: 60px 1fr;
+    gap: 12px;
+  }
+
+  .skill-list > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .footer-inner {
+    padding: 28px 0;
+
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
